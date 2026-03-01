@@ -4,15 +4,14 @@
 }
 
 html, body {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden; /* trava qualquer overflow horizontal */
 }
 
 body {
   font-family: "Poppins";
   background-color: #1e1e1e;
-  margin: 0;
 
   /* Em vez de height fixa, deixa crescer */
   min-height: 100vh;
@@ -21,7 +20,8 @@ body {
   align-items: center;
   justify-content: center;
 
-  padding: 16px; /* IMPORTANTÍSSIMO em telas pequenas */
+  padding: 20px 16px; /* IMPORTANTÍSSIMO em telas pequenas */
+  overflow-x: hidden;     /* bloqueia só lateral */
 }
 
 /* Container responsivo de verdade */
