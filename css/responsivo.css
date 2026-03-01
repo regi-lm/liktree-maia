@@ -1,0 +1,21 @@
+
+
+@media screen and (max-width: 768px) {
+    body {
+    align-items: flex-start;   /* para de centralizar verticalmente */
+    justify-content: center;   /* pode manter centralizado horizontalmente */
+    padding-top: 16px;         /* respiro no topo */
+  }
+}
+
+@media screen and (max-width: 425px) {
+    body {
+        height: 130vh;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    body {
+        height: 150vh;
+    }
+}

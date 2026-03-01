@@ -1,0 +1,115 @@
+/* Reset e proteção contra estouro */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* trava qualquer overflow horizontal */
+}
+
+body {
+  font-family: "Poppins";
+  background-color: #1e1e1e;
+  margin: 0;
+
+  /* Em vez de height fixa, deixa crescer */
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 16px; /* IMPORTANTÍSSIMO em telas pequenas */
+}
+
+/* Container responsivo de verdade */
+.container {
+  background-color: #0093ce;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+
+  width: 100%;
+  max-width: 420px; /* controla no desktop */
+  
+  /* deixa o conteúdo "respirar" */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Imagem nunca estoura */
+.profile {
+  width: min(200px, 70vw);
+  height: min(200px, 70vw);
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid navy;
+  margin: 0 auto;
+}
+
+/* Texto sempre quebra linha */
+h1, p, .card, .link {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.sub-title {
+  margin: 0;
+}
+
+/* Card SEM width fixa: ocupa o container */
+.card {
+  width: 100%;
+  padding: 18px; /* um pouco menor ajuda no mobile */
+  border-radius: 12px;
+  background-color: #fff;
+  color: #111;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+.card-content p {
+  margin: 8px 0;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Link responsivo e sem icon estourando */
+.link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  background-color: #fff;
+
+  position: relative;
+}
+
+.link img {
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  left: 10px;
+  max-width: 100%;
+}
+
+.link p {
+  margin: 0;
+  color: black;
+  padding-left: 15px; /* espaço pro ícone */
+  padding-right: 10px;
+  text-align: center;
+}
